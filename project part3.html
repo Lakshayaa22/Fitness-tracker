@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FITNESS TRACKER</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:(245, 245, 245);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            position: relative;
+            background-image: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAQEBUQEBIVFRAVFRUYFREPFRUVFRUVFhUWFhYVFRUYHSggGBolHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGhAQFy0lHSYtMC4rLS0tLS0tLS0tLS0tLSstLS0tLS8tKy0tLS0tLS0tLS0tLS0rLS0tKy0tLS0tLf/AABEIAI4BYwMBIgACEQEDEQH/xAAcAAEAAQUBAQAAAAAAAAAAAAAAAQIDBAUHBgj/xAA+EAACAQIEAggDBQcDBQEAAAAAAQIDEQQSITEFQQYTIlFhcYGRMqGxBxRC0fAjUmJygsHhM5LxQ2OissIk/8QAGAEBAQEBAQAAAAAAAAAAAAAAAAECAwT/xAAeEQEBAAICAwEBAAAAAAAAAAAAAQIRAyESIjFBBP/aAAwDAQACEQMRAD8A4aAAAAAAAAAAAAAAAAAAAAAAACQAAAAEokhEgSSQSFQSgAJAPf8AQjoB95gsVjG4Yd2cKabUqi/eb/DB8ravw55yymM3WsMLldRicUq1uJYDBqlBylhY1Kdae0U4qPVtyel3CC57njqVGUm0lrro7J6b6Pc+gsXxGhh40sHh6cHmaSoxisuXndL6+p4zpB9nGIk5YmNShSw9nOplTUo662SjquestNdTljyPTlxXpzTNpZlmvBp2asb+hGnh8QqGLoKVPOrzTkpuLfxXvZrwt3ljpth+qx9emvhjK0f5bJx+TRuXtyyx1i0Reo4mcdmycPgqk05Ri2kU1MNOO8WvM305SWdtrheLtK1WV13Wu/yRgynTezku66RRgaUJO03buZOOw+R6bd5nUlbttm6oc13kMsIvQNuYCWQAIJuQBBIAFkABAAAAAAAAAAAAAAAAAAAAABIAAEkEgSgESFCQAJARl8I4fUxVenh6Xx1JKKvsr7t+CV36EI2XQvgbxuLhTkn1EXnry5Rpx1afjK2VefgdY4zVrV6mWE1QwsPxWvNpbWjsvX2NrwPo9R4dRcKa0jFudR7znbeXz8keJ6a8cyU7QfxfQ82WVyvT38eE48e3qeheCwVStOrh6k51lHLN1Unk01fm+8yeN8cjSpVOvklh43ikkk58sqXjqea+zn/8uAniKr7VeTku/ItIr1d36ouywsq1RYjEQz5f9HDcovlOpfRepmztuXrbyPHqNfFz++V4Qw+F06qNTSbjp2lHfXxPXdL+jNCnGeMyqrWr2lnmrxisqSVOOy0W71PMdMMRTz58TN1q6+GjS/0ofn5nveE46XF+GxqRp5MiyNPa8VbR92xu71tia3quR8BhNYlK/ZvquRvukVKOtkl5F2HBHSq7q990XuLUUo6+4uXZMdTTneMhZlh1G1bkZnFElIw6cLux3nx48vulBepIirFRdt7F2jNFZhVhZlu5mY2zjGS7rGGIZTVCCSCoAACyAAgAAAAAAAAAAAAAAAAAAAAAlAIACUABKJCJCoJAQEo6D9jHD1Uxs67/AOlCy8JVLq/+2M16nPkdP+xKulLEx53oy9P2ifza9znyXWNdeGbzjovSytaCpx2ldy8dUcU6RSlicTGlH8UlFeF3b5LU7B0trJQlU/cpt+9kcd6J14y4jSdV6OUkv5pLJH6s44ftenk/I6vw3hTcItq1GnFRpR78qtmt9CrHxsmrdnm5f3PSVpxVO9rJaJeCOf8ATHjEIxtfTwe5iTbr5ajyXS7iFNJwU5O9rqlZJvkm+5dx7H7IONU5YOphG7TpybSb1am81/dv2OScWx/Wz0iklt/yV8A4zPB4iNeGttJR74vdHfw9dPLeX226R0jrZKrfPc8rxrjF45djbdIuJwr01Xp2cZL1T7mc/wAZVcnqZwx23ycmvi1Vm5O5eh2I5ub2/Ms0+9itPM7+x3eXf6t3JiEiCsK5zbK0WSuEiKqBIKIAAFkABAAAAAAAAAAAAAAAAAAAAABICJAEogqQUQCJIAN9wXhKjUqTxKj1dCnKcotqSlPN1cIaPfO27d0Gel6NcHwiq4epWpxzKlLF1GpStGFNZ6Syp27TdNNW3lYLp4CpRnH4oyjfbMmr+Vzf9AeL/dMdTnJ2pz/ZzvyU2rP0kovyuUce4pLEU5Tl+PENx1/DGDje3jmXsafBYfrasKS0zzhC/wDNJR/uS9y7am8cpp3npLw3EYqM6dFJQlSkpVJ6KNmn67M4tXwlfDypYiyjrGdK7TvkacW13O1zvHGMeqOArRi7zjRqNR3aXwpv3XmcY6Y4lurCF1lhTioxS2VuZ5+OvXyyPZYLp3DGU+rb6us1rCb0b/hlz8tzxfSWpVlNRlfKldt/vO90vDY8zXXaOp/ZpwujiYwc6az01JNyjre+jubuMx7jGOVz9a59h+CVqibjFqK3ctPZGJhcMpVo027Xla7O4dMeGQo0X1bs1u+S/VzjGFo5sXCLlb9pG79Uaxz3tjPjk1pb4jVlGbguzbRqP9/EwZSfNnTOlnB6WHp5sqc5u6iuWl3KTObYh3ZcMts8uFx/VolkA24qqa1Jqx5lVOJLRRYFyqcbFIRdi7klFLcraCoBIAsAAIAAAAAAAAAAAAAAAAAAAAAJQCJAIkIkKG+wVWhGnSj93hOShUqTq5pZlOPWOEXrayVOPZtzfeaJFyjUy5tbZotO3i1f5IDa8R4jN4aEZWUpzzSa0bjSTjC6Wms512XMNxCcMDWnft1nSw8HfVU4Xq1UvDN1Huavi7WdJK0VCNlvbN+0a95su4mDyYeila6c3/NUna7/AKYU2QTiIZqdPJqoJqSWrUrpttdzvo/BmT0Zq0IYqjUqzaUKsJNZbqyldttfSxqa0Mr0ld7O11Z3d147FpDXWmplq7du4r0twuMwWIhh6nbdNQUJRcZNzmloueib35HKOMuTxE3K9/4v1sayE2tm15G3xHEPvEVLETannspqOZqOVLVNrTyOcw8fjteXynavorBSxTqyScKFOrWlf/tweX/zcDe9BOmcMJWn94zyVWa7UbNR5Xavf2NFJU6GGrulPN13V0k+eVPral9Fo3Cl72NMpZJp2vla0eza7/U3cZZpymdxu46/x7pPQxVGUqcuxrC0k4vMt7p77o5OpWrpp7TTv5SR7rozxjDQwdHCWjOtU66U2knkabks7eqvFLY89RVCeNhFxtGU7PbRN/I5Y+trvnfKS7ew6bY6NSlGa1WVe9tbnLKkrtvxO09MlQpYdU4RXZSXyON42Sc20vYvEn9EWCUiklHZ5mRPcpYYYENFkvFqW4EJmTVWz70YxlTd4Lwf9gRbIAAsgAIAAAAAAAAAAAAAAAAAAAAAJRJCJQEkkEhUixBKAu4ianJyel7eOqSRtcZTUcXP92jTUdefV0o07ebaNMV1JuTcm2292+fmRUb7l2fDqsaUcRlfUynKCn/FBRck+7SSLR0zoBXw+I4bVwlZJyp1XJRdr5KiXaXlJNEyuptrDHyunL8hscLhVVjK+yWj27Vvp+Zm8dw9CEnGndu+it+Hx1d2/wBWMSGKlazWi2S+hLbZ01MZLqsasssaUWrJ3qa+Msv0h8zDbvqZ/FpOVZx3yRjBL+WKi/nd+pRwyg/vFOMk754tprud3p6GnLXejAqvdyoKba7LlTTdlLZO217PfuPUVOhVd4iMYNWbWapJ2y98tO49nwijRw9SrVg+1XlGUlolGydlG3LVmv4lxrsytotbtaHG523p68eGSe1Yn2g4iyUKbvGKtm5ye1zmj3PR8a4jm3S20NfwGEZV1KSWWHalfayNYdRjl9stKa/DZUqKnUVpS1invbvNdFHoOmXFI4iqpQ+Gy07jQ00bx3rdcs5JdRWQAzTAW5ouFMloBbMmP+n/AFL6MxjJS/Zf1L6MhFsAFFkABAAAAAAAAAAAAAAAAAAAAABKJIRIEokglBUolEACSSkkCpF7B4upRmp05OMlpps094tc0+4sADZricJTdSpB5mmn1bVtednr8zH+9RSsk78m/qYYJpryrMwlGWInk0u23KdtW3tme27t6m+4fw2pQu3e/wBDYfZzwyFWlXnPZyhDXba/v2l7G8xEatH411lNOMdVeXaTUY5lr3ayT33JljbOmuPLGfWv4Pjc0FdpzvZ35eJ5/HY55LbaczY8IqU3XnNStTu7rW1073T2e9jU8cp06ds03eTlZRi3ZKz1btbRrvMTC7+OuXJNfWkxzeb0X5l/CYnJQmopZpSWZvuSdl76+hNSph5WcnNvaytt32/yX62Op04w6mmoxcXmb1k5XSuru8bWeifM6a6cPLvbUOEt7P1KDJrYty5b85dp/kvYxmysLkCSmDJYVIBAFsyb/s/Vf3/Mstcy/FLq35q3vr9H7kWLJJAKi0AAgAAAAAAAAAAAAAAAAAAAAAlEkIkASQSFSgEAJJKSQKiCEAAAA6x0FwbpcNzSSfWVJVEvBxjFJP8AetG+n71jA47jr5XCWk1KcU1yVO2ZS00d6aXjc3rpVsPhaeGp9W4RpqPam4XbjaT1VtXd9lp6nmaHBK6m61R072UIwjZQjBapRT8dd9zeqzt5TDptRlTvmek9Gk7Lutv5dxcxmGqTpPND4E5Rks3L403Lws/6fE9i8DKK+Jvyy6exq+Ly7EHF3bqRjvdK+7fpFiweHnJvfkXKUHNKK3vp6llmVgmlJNyt5GFVV8LlelnB/i5J6XT8mY1RLk16I2EqNNRcnObn3R7/AJmFU6xb5kv4rotgtwKii5WQSyqnC7KCXLSwajJxuGcFrz2/XoWor9m/Bpmy4v2qVObeslHR+T/V/E1lOXZa/Wn/ACZjeU1Vokgk05rQACAAAAAAAAAAAAAAAAAAAAACUAgBJJBKCiJCQAkEACUCABJueh2DVbHUYNXipObXf1ac0n5uKXqaZHs/sxpJ16s2tVTUV4ZpXbX+1Fn1L8e+4ljMsct0otfj0i1by1/weexPV2usn9On/rY23EKScnmv6fq3yPL8bUNIxclZ3bsne2vejpWWDx7jLjB04q1+acr8+9mn4ZUdSlWjfVQbS/plH/6NdxGpmqSs3a7tfkhwzFOlUUl5Nd6fIxtpiGXgFeUUknrz/wAkQwblezWjtqXcA4QnbLnlyUnlj623JBtqzsmnUt/DRV5e9jR42Lve01/Pe/zPZUsJU6u8pxhG3w0IJP3f5HmOM0rSUls9m23J+fL2LRqyuJQV00ZEsp8SpkJ2YVncTqfBBfgpxXrbn7mFfSxDd9XuQSRbd1IIsCsv/9k=');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        header {
+            background-color: rgba(204, 37, 159, 0.952); /* Transparent overlay */
+            color:whitesmoke(207, 49, 49);
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        h1, h2 {
+            color:white(182, 38, 38);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 20px;
+            margin: 20px 0;
+            background-color: rgba(255, 255, 255, 0.8); /* Slight transparent background */
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(19, 211, 144, 0.1);
+            z-index: 1;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 16px;
+            background-color: #c13f96;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #19c40c;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            padding: 8px;
+            background-color: #ecf0f1;
+            margin-bottom: 5px;
+            border-radius: 5px;
+        }
+
+        /* Profile Section */
+        #profile-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        #profile-section img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        #profile-section input[type="file"] {
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: rgba(227, 66, 152, 0.7); /* Transparent overlay */
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Smooth Scroll on Navbar */
+        nav a {
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Fitness Tracker</h1>
+        <nav>
+            <a href="#profile-section">Profile</a>
+            <a href="#workouts">Workouts</a>
+            <a href="#goals">Goals</a>
+            <a href="#nutrition">Nutrition</a>
+            <a href="#challenges">Challenges</a>
+            <a href="#articles">Fitness Articles</a>
+        </nav>
+    </header>
+
+    <!-- Profile Section -->
+    <section id="profile-section">
+        <h2>Your Profile</h2>
+        <img id="profile-pic" src="https://tse2.mm.bing.net/th?id=OIP.jryuUgIHWL-1FVD2ww8oWgHaHa&pid=Api&P=0&h=180" alt="Profile Picture">
+        <form id="profile-form">
+            <input type="file" id="profile-image" accept="image/*">
+            <input type="text" id="name" placeholder="Enter your name" required>
+            <input type="number" id="age" placeholder="Enter your age" required>
+            <button type="submit">Save Profile</button>
+        </form>
+    </section>
+
+    <section id="workouts">
+        <h2>Log Your Workouts</h2>
+        <form id="workout-form">
+            <input type="text" id="exercise-name" placeholder="Exercise Name" required>
+            <input type="number" id="sets" placeholder="Sets" required>
+            <input type="number" id="reps" placeholder="Reps" required>
+            <button type="submit">Log Workout</button>
+        </form>
+        <div id="workout-log"></div>
+    </section>
+
+    <section id="goals">
+        <h2>Set Your Fitness Goals</h2>
+        <form id="goal-form">
+            <input type="text" id="goal-name" placeholder="Goal Name" required>
+            <input type="number" id="goal-target" placeholder="Goal Target" required>
+            <button type="submit">Set Goal</button>
+        </form>
+        <div id="goal-list"></div>
+    </section>
+
+    <section id="nutrition">
+        <h2>Track Your Nutrition</h2>
+        <form id="nutrition-form">
+            <input type="text" id="food-name" placeholder="Food Item" required>
+            <input type="number" id="calories" placeholder="Calories" required>
+            <button type="submit">Log Food</button>
+        </form>
+        <div id="nutrition-log"></div>
+    </section>
+
+    <!-- Fitness Challenges Section -->
+    <section id="challenges">
+        <h2>Take On a Fitness Challenge</h2>
+        <ul id="challenge-list">
+            <li>30 Days Push-Up Challenge</li>
+            <li>Squat Challenge: 100 Squats per day</li>
+            <li>Plank Challenge: Hold for 2 minutes</li>
+        </ul>
+        <button id="start-challenge">Start Challenge</button>
+    </section>
+
+    <section id="articles">
+        <h2>Fitness Articles</h2>
+        <div id="fitness-articles">
+            <article>
+                <h3>Top 5 Exercises for Beginners</h3>
+                <p>Learn the best exercises to start your fitness journey.</p>
+            </article>
+            <article>
+                <h3>How to Stay Motivated in Fitness</h3>
+                <p>Tips and strategies to keep you on track with your fitness goals.</p>
+            </article>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Fitness Tracker | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        // Profile Picture Update
+        document.getElementById('profile-image').addEventListener('change', function(event) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                document.getElementById('profile-pic').src = e.target.result;
+            }
+            reader.readAsDataURL(this.files[0]);
+        });
+
+        // Workout Logging
+        const workoutForm = document.getElementById('workout-form');
+        const workoutLog = document.getElementById('workout-log');
+
+        workoutForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const exerciseName = document.getElementById('exercise-name').value;
+            const sets = document.getElementById('sets').value;
+            const reps = document.getElementById('reps').value;
+
+            const workoutEntry = document.createElement('div');
+            workoutEntry.classList.add('workout-entry');
+            workoutEntry.innerHTML = `<strong>${exerciseName}</strong> - ${sets} sets of ${reps} reps`;
+            
+            workoutLog.appendChild(workoutEntry);
+
+            // Clear form
+            workoutForm.reset();
+        });
+
+        // Goal Setting
+        const goalForm = document.getElementById('goal-form');
+        const goalList = document.getElementById('goal-list');
+
+        goalForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const goalName = document.getElementById('goal-name').value;
+            const goalTarget = document.getElementById('goal-target').value;
+
+            const goalEntry = document.createElement('div');
+            goalEntry.classList.add('goal-entry');
+            goalEntry.innerHTML = `<strong>${goalName}</strong>: ${goalTarget} reps/sets`;
+
+            goalList.appendChild(goalEntry);
+
+            // Clear form
+            goalForm.reset();
+        });
+
+        // Nutrition Logging
+        const nutritionForm = document.getElementById('nutrition-form');
+        const nutritionLog = document.getElementById('nutrition-log');
+
+        nutritionForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const foodName = document.getElementById('food-name').value;
+            const calories = document.getElementById('calories').value;
+
+            const foodEntry = document.createElement('div');
+            foodEntry.classList.add('food-entry');
+            foodEntry.innerHTML = `${foodName} - ${calories} calories`;
+
+            nutritionLog.appendChild(foodEntry);
+
+            // Clear form
+            nutrition
